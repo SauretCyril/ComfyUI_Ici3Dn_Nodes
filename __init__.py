@@ -1,5 +1,5 @@
 from .nodes.nodes import *
-from .nodes.loopback import *
+#from .nodes.loopback import *
 
 
 NODE_CLASS_MAPPINGS = { 

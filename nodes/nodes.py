@@ -7,7 +7,7 @@ from comfy_extras.nodes_mask import MaskComposite, SolidMask,FeatherMask
 def pil2tensor(image):
     return torch.from_numpy(np.array(image).astype(np.float32) / 255.0).unsqueeze(0) 
  
-class ici3Dn_identity:
+class Ici3Dn_identity:
     @classmethod
     def INPUT_TYPES(cls):
             return {"required": {					
@@ -17,12 +17,12 @@ class ici3Dn_identity:
             }
     #RETURN_TYPES = ("MASK","FLOAT","STRING")
     #RETURN_NAMES = ("MASK","New pos","Debug")
-    FUNCTION = "ici3Dn_identity"
+    FUNCTION = "Ici3Dn_identity"
     OUTPUT_NODE = False
     CATEGORY = "Ici3Dn_ComFyIU"
 		
     @classmethod
-    def ici3Dn_identity(self,Original_workflow, ID):	
+    def Ici3Dn_identity(self,Original_workflow, ID):	
         self.Original_workflow =Original_workflow
         self.ID
 		

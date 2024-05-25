@@ -8,7 +8,7 @@ from comfy_extras.nodes_mask import MaskComposite, SolidMask,FeatherMask
 def pil2tensor(image):
     return torch.from_numpy(np.array(image).astype(np.float32) / 255.0).unsqueeze(0) 
  
-		
+Ici3Dn_data_Conf="G:\\GenezIA_Working_G\\WorkSpace_Python\\PyRun_Comfyui_Data\\nodes"		
 
 class Ici3Dn_Mask:
 		#"imgWidth": ("INT", {"default": 524}),	
@@ -77,17 +77,19 @@ class Ici3Dn_Identity:
             }
         }
 
-    RETURN_TYPES = ("STRING","STRING","BOOLEAN")
+    RETURN_TYPES = ("STRING","STRING","STRING")
     RETURN_NAMES= ("ID","ConfFile","IsConfFile")
     FUNCTION = "Get_Identity"
 
     CATEGORY = "Ici3Dn_ComFyIU"   
     
     def Get_Identity(self, ID,Originale):
-        self.data_Conf="G:\\GenezIA_Working_G\\WorkSpace_Python\\PyRun_Comfyui_Data\\nodes"
-        file= os.path.joint(self.data_Conf,f"{ID}.json")
+        
+        file=(f"{Ici3Dn_data_Conf}\\{ID}.json")
+        
+        #file= os.path.joint(self.data_Conf,f"{ID}.json")
         isConfFil=False
-        if os.path.joint(self.data_Conf,f"{ID}.json"):
-            isConfFil=True
+        if os.path.exists(file):
+            isConfFil="True"
          
         return (ID,file,isConfFil)    

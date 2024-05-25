@@ -100,7 +100,7 @@ class Ici3Dn_ShowText:
         return {
             "required": {
                 "text": ("STRING", {"forceInput": True}),
-                "ret": ("STRING", {"forceInput": False}),
+                
             },
             "hidden": {
                 "unique_id": "UNIQUE_ID",

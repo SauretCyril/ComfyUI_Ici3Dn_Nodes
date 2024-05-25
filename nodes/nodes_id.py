@@ -1,3 +1,4 @@
+
 class Ici3Dn_identity:
     @classmethod
     def INPUT_TYPES(cls):
@@ -16,5 +17,5 @@ class Ici3Dn_identity:
     def Ici3Dn_identity(self,Original_workflow, ID):
         	
         self.Original_workflow =Original_workflow
-        self.ID
+        self.ID=ID
 		

@@ -16,7 +16,7 @@ class Ici3Dn_test:
 		
 		RETURN_TYPES = ("MASK","FLOAT","STRING")
 		RETURN_NAMES = ("MASK","New pos","Debug")
-		FUNCTION = "Ici3Dn_BuildMask"
+		FUNCTION = "Ici3Dn_test"
 		OUTPUT_NODE = True
 		CATEGORY = "Ici3Dn_ComFyIU"
 		@classmethod

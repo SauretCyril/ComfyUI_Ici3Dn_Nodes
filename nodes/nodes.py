@@ -116,6 +116,7 @@ class Ici3Dn_ShowText:
     CATEGORY = "utils"
 
     def notify(self, text, unique_id=None, extra_pnginfo=None):
+        result=text
         if unique_id is not None and extra_pnginfo is not None:
             if not isinstance(extra_pnginfo, list):
                 print("Error: extra_pnginfo is not a list")
@@ -132,6 +133,6 @@ class Ici3Dn_ShowText:
                 )
                 if node:
                     node["widgets_values"] = [text]
-
-        return {"ui": {"text": text}, "result": (text,)}
+		
+        return {"ui": {"text": text}, "result": result}
 

@@ -116,7 +116,7 @@ class Ici3Dn_ShowText:
     OUTPUT_NODE = True
     OUTPUT_IS_LIST = (True,)
 
-    CATEGORY = "utils"
+    CATEGORY = "Ici3Dn_ComFyIU"
 
     def notify(self, text, unique_id=None, extra_pnginfo=None):
         if unique_id is not None and extra_pnginfo is not None:
@@ -138,3 +138,24 @@ class Ici3Dn_ShowText:
 
         return {"ui": {"text": text}, "result": (text,)}
  
+class Ici3Dn_ViewText:
+    def __init__(self):
+        pass
+
+    @classmethod
+    def INPUT_TYPES(s):
+        return {
+            "required": {
+                "text": ("STRING", {"forceInput": True}),
+            }
+        }
+
+    RETURN_TYPES = ("STRING",)
+    FUNCTION = "view_text"
+    OUTPUT_NODE = True
+
+    CATEGORY = "Ici3Dn_ComFyIU"
+
+    def view_text(self, text):
+        # Parse the combined JSON string
+        return {"ui": {"text": text}, "result": (text,)}

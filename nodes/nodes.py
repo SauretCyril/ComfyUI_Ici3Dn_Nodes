@@ -100,6 +100,7 @@ class Ici3Dn_ShowText:
         return {
             "required": {
                 "text": ("STRING", {"forceInput": True}),
+                "ret": ("STRING", {"forceInput": False}),
             },
             "hidden": {
                 "unique_id": "UNIQUE_ID",
@@ -133,5 +134,5 @@ class Ici3Dn_ShowText:
                 if node:
                     node["widgets_values"] = [text]
 
-        return {"ui": {"text": text}, "result": (text,)}
+        return {"ui": {"ret": text}, "result": (text,)}
 

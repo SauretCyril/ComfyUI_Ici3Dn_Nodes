@@ -80,13 +80,13 @@ class Ici3Dn_Identity:
             }
         }
 
-    RETURN_TYPES = ("STRING","STRING")
-    RETURN_NAMES= ("Out","msg")
+    RETURN_TYPES = ()
+    RETURN_NAMES= ()
     FUNCTION = "run"
 
     CATEGORY = "Ici3Dn_ComFyIU"   
     
-    def run(self, In, ID,Originale):
+    def run(self, ID,Originale):
         
         file=(f"{Ici3Dn_data_Conf}\\{ID}.json")
         
@@ -95,7 +95,7 @@ class Ici3Dn_Identity:
         if os.path.exists(file):
             isConfFil="True"
          
-        return str(In),{"ui": {"text": "why not"}, "result": isConfFil}   
+        return {"ui": {"text": "why not"}, "result": isConfFil}   
     
 class Ici3Dn_ShowText:
     @classmethod

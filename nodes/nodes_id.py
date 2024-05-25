@@ -19,5 +19,6 @@ class Ici3Dn_identity:
         	
         self.Original_workflow =Original_workflow
         self.ID=ID
+        return (self.Original_workflow,self.ID)
         
 		

@@ -96,7 +96,7 @@ class Ici3Dn_Identity:
         if os.path.exists(file):
             isConfFil="True"
          
-        return {str(In),("ui": {"text": "why not"}, "result": isConfFil)}   
+        return str(In),{"ui": {"text": "why not"}, "result": isConfFil}   
     
 class Ici3Dn_ShowText:
     @classmethod

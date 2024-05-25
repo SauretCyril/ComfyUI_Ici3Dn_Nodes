@@ -101,10 +101,6 @@ class Ici3Dn_ShowText:
             "required": {
                 "text": ("STRING", {"forceInput": True}),
             },
-            "hidden": {
-                "unique_id": "UNIQUE_ID",
-                "extra_pnginfo": "EXTRA_PNGINFO",
-            },
         }
    
     INPUT_IS_LIST = True
@@ -118,6 +114,5 @@ class Ici3Dn_ShowText:
     def notify(self, text, unique_id=None, extra_pnginfo=None):
         result=text
         
-		
         return {"ui": {"text": text}, "result": result}
 

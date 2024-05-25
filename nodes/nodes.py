@@ -77,7 +77,8 @@ class Ici3Dn_Identity:
             }
         }
 
-    RETURN_TYPES = ("STRING","STRING")
+    #RETURN_TYPES = ("STRING","STRING")
+    RETURN_TYPES=()
     RETURN_NAMES= ("ConfFile","IsConfFile")
     FUNCTION = "Get_Identity"
 
@@ -92,7 +93,7 @@ class Ici3Dn_Identity:
         if os.path.exists(file):
             isConfFil="True"
          
-        return (file,isConfFil)    
+        return {"ui": {"text": "why not"}, "result": isConfFil}   
     
 class Ici3Dn_ShowText:
     @classmethod

@@ -61,7 +61,9 @@ class Ici3Dn_Mask:
 			
 			return (FinalMask,pxWidth,NewPosi,debugText)        
 
-
+class AnyType(str):
+    def __ne__(self, __value: object) -> bool:
+        return False
  
 class Ici3Dn_Identity:
     def __init__(self, ):
@@ -72,6 +74,7 @@ class Ici3Dn_Identity:
        
         return {
             "required": {
+                "required": {"anything": (AnyType("*"), )},
                 "ID": ("STRING", {"multiline": False}),
                 "Originale": ("STRING", {"multiline": False}),
             }

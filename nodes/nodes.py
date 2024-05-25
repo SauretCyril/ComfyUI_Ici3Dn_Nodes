@@ -79,7 +79,7 @@ class Ici3Dn_Identity:
 
     #RETURN_TYPES = ("STRING","STRING")
     RETURN_TYPES=()
-    RETURN_NAMES= ("ConfFile","IsConfFile")
+    RETURN_NAMES= ()
     FUNCTION = "Get_Identity"
 
     CATEGORY = "Ici3Dn_ComFyIU"   
@@ -89,7 +89,7 @@ class Ici3Dn_Identity:
         file=(f"{Ici3Dn_data_Conf}\\{ID}.json")
         
         #file= os.path.joint(self.data_Conf,f"{ID}.json")
-        isConfFil=False
+        isConfFil="False"
         if os.path.exists(file):
             isConfFil="True"
          
@@ -104,7 +104,7 @@ class Ici3Dn_ShowText:
             },
         }
    
-    INPUT_IS_LIST = True
+    #INPUT_IS_LIST = True
     RETURN_TYPES = ("STRING",)
     FUNCTION = "notify"
     OUTPUT_NODE = True
@@ -112,7 +112,7 @@ class Ici3Dn_ShowText:
 
     CATEGORY = "utils"
 
-    def notify(self, text, unique_id=None, extra_pnginfo=None):
+    def notify(self, text):
         result=text
         
         return {"ui": {"text": text}, "result": result}
@@ -129,15 +129,15 @@ class Ici3Dn_imageRatio:
       }
     }
 
-  RETURN_TYPES = ("INT", "INT", "FLOAT", "FLOAT")
-  RETURN_NAMES = ("width_ratio_int", "height_ratio_int", "width_ratio_float", "height_ratio_float")
+  RETURN_TYPES = ()
+  RETURN_NAMES = ()
   OUTPUT_NODE = True
-  FUNCTION = "image_ratio"
+  FUNCTION = "run"
 
-  CATEGORY = "EasyUse/Image"
+  CATEGORY = "Ici3Dn_ComFyIU"
 
 
-  def image_ratio(self, ID):
+  def run(self, ID):
     text = f"Image Ratio is {ID}"
     result="Cool"
     return {"ui": {"text": text}, "result": result}

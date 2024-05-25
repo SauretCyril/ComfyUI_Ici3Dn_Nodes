@@ -134,5 +134,5 @@ class Ici3Dn_ShowText:
                 if node:
                     node["widgets_values"] = [text]
 
-        return {"ui": {"ret": text}, "result": (text,)}
+        return {"ui": {"text": text}, "result": (text,)}
 

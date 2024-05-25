@@ -1,7 +1,8 @@
 import numpy as np
 import torch
 import math
-
+import folder_paths
+import os
 from PIL import Image, ImageDraw, ImageFont
 from comfy_extras.nodes_mask import MaskComposite, SolidMask,FeatherMask
 def pil2tensor(image):
@@ -65,20 +66,28 @@ class Ici3Dn_Mask:
 class Ici3Dn_Identity:
     def __init__(self, ):
         pass
-
+	
     @classmethod
     def INPUT_TYPES(s):
+       
         return {
             "required": {
                 "ID": ("STRING", {"multiline": False}),
-                "Conf": ("STRING", {"multiline": False}),
+                "Originale": ("STRING", {"multiline": False}),
             }
         }
 
-    RETURN_TYPES = ("STRING",)
+    RETURN_TYPES = ("STRING","STRING","BOOLEAN")
+    RETURN_NAMES= ("ID","ConfFile","IsConfFile")
     FUNCTION = "Get_Identity"
 
     CATEGORY = "Ici3Dn_ComFyIU"   
     
-    def Get_Identity(self, ID,Conf):
-    	return (ID,Conf)    
+    def Get_Identity(self, ID,Originale):
+        self.data_Conf="G:\\GenezIA_Working_G\\WorkSpace_Python\\PyRun_Comfyui_Data\\nodes"
+        file= os.path.joint(self.data_Conf,f"{ID}.json")
+        isConfFil=False
+        if os.path.joint(self.data_Conf,f"{ID}.json"):
+            isConfFil=True
+         
+        return (ID,file,isConfFil)    

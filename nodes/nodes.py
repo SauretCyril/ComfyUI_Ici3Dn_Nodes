@@ -74,7 +74,7 @@ class Ici3Dn_Identity:
        
         return {
             "required": {
-                "required": {"anything": (AnyType("*"), )},
+                "In": {"anything": (AnyType("*"), )},
                 "ID": ("STRING", {"multiline": False}),
                 "Originale": ("STRING", {"multiline": False}),
             }
@@ -83,11 +83,11 @@ class Ici3Dn_Identity:
     #RETURN_TYPES = ("STRING","STRING")
     RETURN_TYPES=()
     RETURN_NAMES= ()
-    FUNCTION = "Get_Identity"
+    FUNCTION = "run"
 
     CATEGORY = "Ici3Dn_ComFyIU"   
     
-    def Get_Identity(self, ID,Originale):
+    def run(self, In, ID,Originale):
         
         file=(f"{Ici3Dn_data_Conf}\\{ID}.json")
         
@@ -96,7 +96,7 @@ class Ici3Dn_Identity:
         if os.path.exists(file):
             isConfFil="True"
          
-        return {"ui": {"text": "why not"}, "result": isConfFil}   
+        return {str(In),("ui": {"text": "why not"}, "result": isConfFil)}   
     
 class Ici3Dn_ShowText:
     @classmethod
@@ -119,28 +119,3 @@ class Ici3Dn_ShowText:
         result=text
         
         return {"ui": {"text": text}, "result": result}
-
-class Ici3Dn_imageRatio:
-  def __init__(self):
-    pass
-
-  @classmethod
-  def INPUT_TYPES(cls):
-    return {
-      "required": {
-        "ID": ("STRING",),
-      }
-    }
-
-  RETURN_TYPES = ()
-  RETURN_NAMES = ()
-  OUTPUT_NODE = True
-  FUNCTION = "run"
-
-  CATEGORY = "Ici3Dn_ComFyIU"
-
-
-  def run(self, ID):
-    text = f"Image Ratio is {ID}"
-    result="Cool"
-    return {"ui": {"text": text}, "result": result}

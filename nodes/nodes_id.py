@@ -12,8 +12,8 @@ class Ici3Dn_identity:
     FUNCTION = "Ici3Dn_identity"
     OUTPUT_NODE = True
     CATEGORY = "Ici3Dn_ComFyIU"
-    RETURN_TYPES = ()
-    RETURN_NAMES = ()
+    RETURN_TYPES = ("STRING","STRING")
+    RETURN_NAMES = ("Original_workflow","ID")
     @classmethod
     def Ici3Dn_identity(self,Original_workflow, ID):
         	

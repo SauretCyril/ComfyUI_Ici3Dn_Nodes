@@ -106,7 +106,7 @@ class Ici3Dn_ShowText:
                 "extra_pnginfo": "EXTRA_PNGINFO",
             },
         }
-
+   
     INPUT_IS_LIST = True
     RETURN_TYPES = ("STRING",)
     FUNCTION = "notify"

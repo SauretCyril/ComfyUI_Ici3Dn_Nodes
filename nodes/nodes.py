@@ -119,3 +119,4 @@ class Ici3Dn_ShowText:
         result=text
         
         return {"ui": {"text": text}, "result": result}
+ 

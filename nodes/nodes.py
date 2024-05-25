@@ -77,8 +77,8 @@ class Ici3Dn_Identity:
             }
         }
 
-    RETURN_TYPES = ("STRING","STRING","STRING")
-    RETURN_NAMES= ("ID","ConfFile","IsConfFile")
+    RETURN_TYPES = ("STRING","STRING")
+    RETURN_NAMES= ("ConfFile","IsConfFile")
     FUNCTION = "Get_Identity"
 
     CATEGORY = "Ici3Dn_ComFyIU"   
@@ -92,4 +92,4 @@ class Ici3Dn_Identity:
         if os.path.exists(file):
             isConfFil="True"
          
-        return (ID,file,isConfFil)    
+        return (file,isConfFil)    

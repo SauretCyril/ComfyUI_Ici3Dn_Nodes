@@ -105,7 +105,7 @@ class Ici3Dn_ShowText:
                 "text": ("STRING", {"forceInput": True}),
             },
             "hidden": {
-                "unique_id": "UNIQUE_ID",
+                "unique_id": "ICI3DN_ID",
                 "extra_pnginfo": "EXTRA_PNGINFO",
             },
         }

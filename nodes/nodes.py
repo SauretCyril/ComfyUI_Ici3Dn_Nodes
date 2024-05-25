@@ -109,13 +109,13 @@ class Ici3Dn_ShowText:
 
     INPUT_IS_LIST = True
     RETURN_TYPES = ("STRING",)
-    FUNCTION = "notify"
+    FUNCTION = "Ici3Dn_notify"
     OUTPUT_NODE = True
     OUTPUT_IS_LIST = (True,)
 
-    CATEGORY = "utils"
+    CATEGORY = "Ici3Dn_ComFyIU"
 
-    def notify(self, text, unique_id=None, extra_pnginfo=None):
+    def Ici3Dn_notify(self, text, unique_id=None, extra_pnginfo=None):
         if unique_id is not None and extra_pnginfo is not None:
             if not isinstance(extra_pnginfo, list):
                 print("Error: extra_pnginfo is not a list")
@@ -135,11 +135,3 @@ class Ici3Dn_ShowText:
 
         return {"ui": {"text": text}, "result": (text,)}
 
-
-NODE_CLASS_MAPPINGS = {
-    "Ici3Dn_ComFyIU": Ici3Dn_ShowText,
-}
-
-NODE_DISPLAY_NAME_MAPPINGS = {
-    "Ici3Dn_ComFyIU": "Ici3dn Show Text",
-}

@@ -60,28 +60,9 @@ class Ici3Dn_Mask:
 			
 			return (FinalMask,pxWidth,NewPosi,debugText)        
 
-class Ici3Dn_identity:
-    @classmethod
-    def INPUT_TYPES(cls):
-            return {"required": {					
-					"Original_workflow": ("STRING",),
-                    "ID": ("STRING",),
-                    }
-            }
-   
-    FUNCTION = "Ici3Dn_identity"
-    OUTPUT_NODE = True
-    CATEGORY = "Ici3Dn_ComFyIU"
-    RETURN_TYPES = ("STRING","STRING")
-    RETURN_NAMES = ("workflow","ID")
-    @classmethod
-    def Ici3Dn_identity(self,Original_workflow, ID):
-        	
-        self.Original_workflow =Original_workflow
-        self.ID=ID
-        return (self.Original_workflow ,self.ID)
+
  
-class Ici3Dn_StringLiteral:
+class Ici3Dn_Identity:
     def __init__(self, ):
         pass
 
@@ -89,14 +70,15 @@ class Ici3Dn_StringLiteral:
     def INPUT_TYPES(s):
         return {
             "required": {
-                "String": ("STRING", {"multiline": True}),
+                "ID": ("STRING", {"multiline": False}),
+                "Conf": ("STRING", {"multiline": False}),
             }
         }
 
     RETURN_TYPES = ("STRING",)
-    FUNCTION = "Ici3Dn_to_string"
+    FUNCTION = "Get_Identity"
 
     CATEGORY = "Ici3Dn_ComFyIU"   
     
-    def Ici3Dn_to_string(self, String):
-    	return (String,)    
+    def Get_Identity(self, ID,Conf):
+    	return (ID,Conf)    

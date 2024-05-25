@@ -73,11 +73,30 @@ class Ici3Dn_identity:
     OUTPUT_NODE = True
     CATEGORY = "Ici3Dn_ComFyIU"
     RETURN_TYPES = ("STRING","STRING")
-    RETURN_NAMES = ("Original_workflow","ID")
+    RETURN_NAMES = ("workflow","ID")
     @classmethod
     def Ici3Dn_identity(self,Original_workflow, ID):
         	
         self.Original_workflow =Original_workflow
         self.ID=ID
-        return (Original_workflow,ID)
-        
+        return (self.Original_workflow ,self.ID)
+ 
+class Ici3Dn_StringLiteral:
+    def __init__(self, ):
+        pass
+
+    @classmethod
+    def INPUT_TYPES(s):
+        return {
+            "required": {
+                "String": ("STRING", {"multiline": True}),
+            }
+        }
+
+    RETURN_TYPES = ("STRING",)
+    FUNCTION = "Ici3Dn_to_string"
+
+    CATEGORY = "Ici3Dn_ComFyIU"   
+    
+    def Ici3Dn_to_string(self, String):
+    	return (String,)    

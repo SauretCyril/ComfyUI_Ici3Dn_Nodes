@@ -9,7 +9,7 @@ NODE_CLASS_MAPPINGS = {
 	"Ici3Dn Build Mask":Ici3Dn_Mask,
     "Ici3Dn identity":Ici3Dn_Identity,
     "Ici3Dn ShowText":Ici3Dn_ShowText,
-    
+    "Ici3Dn Id":Ici3Dn_imageRatio
   
     }
 

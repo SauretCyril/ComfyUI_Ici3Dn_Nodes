@@ -117,3 +117,27 @@ class Ici3Dn_ShowText:
         
         return {"ui": {"text": text}, "result": result}
 
+class Ici3Dn_imageRatio:
+  def __init__(self):
+    pass
+
+  @classmethod
+  def INPUT_TYPES(cls):
+    return {
+      "required": {
+        "ID": ("STRING",),
+      }
+    }
+
+  RETURN_TYPES = ("INT", "INT", "FLOAT", "FLOAT")
+  RETURN_NAMES = ("width_ratio_int", "height_ratio_int", "width_ratio_float", "height_ratio_float")
+  OUTPUT_NODE = True
+  FUNCTION = "image_ratio"
+
+  CATEGORY = "EasyUse/Image"
+
+
+  def image_ratio(self, ID):
+    text = f"Image Ratio is {ID}"
+    result="Cool"
+    return {"ui": {"text": text}, "result": result}

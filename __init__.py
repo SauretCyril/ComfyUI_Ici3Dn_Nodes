@@ -7,8 +7,7 @@ from .nodes.nodes_test import *
 
 NODE_CLASS_MAPPINGS = { 
 	"Ici3Dn Build Mask":Ici3Dn_Mask,
-    "Ici3Dn identity":Ici3Dn_identity,
-    "Ici3Dn test":Ici3Dn_test}
+    "Ici3Dn identity":Ici3Dn_identity}
 
     
     

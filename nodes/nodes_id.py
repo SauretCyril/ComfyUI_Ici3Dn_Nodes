@@ -12,10 +12,12 @@ class Ici3Dn_identity:
     FUNCTION = "Ici3Dn_identity"
     OUTPUT_NODE = True
     CATEGORY = "Ici3Dn_ComFyIU"
-		
+    RETURN_TYPES = ()
+    RETURN_NAMES = ()
     @classmethod
     def Ici3Dn_identity(self,Original_workflow, ID):
         	
         self.Original_workflow =Original_workflow
         self.ID=ID
+        
 		

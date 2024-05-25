@@ -80,9 +80,8 @@ class Ici3Dn_Identity:
             }
         }
 
-    RETURN_TYPES = ("STRING")
-    
-    RETURN_NAMES= ("Out")
+    RETURN_TYPES = ("STRING","STRING")
+    RETURN_NAMES= ("Out","msg")
     FUNCTION = "run"
 
     CATEGORY = "Ici3Dn_ComFyIU"   

@@ -39,11 +39,3 @@ class ShowText25:
 
         return {"ui": {"text": text}, "result": (text,)}
 
-
-NODE_CLASS_MAPPINGS = {
-    "ShowText25": ShowText25,
-}
-
-NODE_DISPLAY_NAME_MAPPINGS = {
-    "ShowText25": "Show Text 25",
-}

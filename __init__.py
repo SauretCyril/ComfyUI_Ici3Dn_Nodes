@@ -29,6 +29,7 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "Ici3Dn identity":"Ici3Dn identity"
 }
 
+init()
 
     
 WEB_DIRECTORY = "./web"

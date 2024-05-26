@@ -41,7 +41,7 @@ class ShowText25:
 
 
 NODE_CLASS_MAPPINGS = {
-    "ShowText25": ShowText,
+    "ShowText25": ShowText25,
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {

@@ -41,9 +41,9 @@ class ShowText:
 
 
 NODE_CLASS_MAPPINGS = {
-    "ShowText|pysssss": ShowText,
+    "ShowText25": ShowText,
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
-    "ShowText|pysssss": "Show Text 🐍",
+    "ShowText25": "Show Text 25",
 }

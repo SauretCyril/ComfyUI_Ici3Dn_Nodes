@@ -1,4 +1,4 @@
-class ShowText:
+class ShowText25:
     @classmethod
     def INPUT_TYPES(s):
         return {
